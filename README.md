@@ -2,6 +2,8 @@
 
 A multi-platform 2D game engine for desktop games. Free and open source (FOSS). Built in C# and .NET 8, for C# developers, on the shoulders of giants.
 
+I created SharpForge because of my vision: to create a great game editor and game engine, that's accessible to C# developers end-to-end -- it's free and open-source, and you can fork and edit every line of code yourself.  And it should be intuitive, run fast, be well-designed and architected, and work across desktop (Windows, Linux, and Mac) for 2D games.
+
 # Contributing
 
 If you find something you want to change, feel free to open a PR. If it's a better change, please open an issue first to discuss it, so we can figure out the best solutiion together!
