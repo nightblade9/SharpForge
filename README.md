@@ -8,11 +8,19 @@ I created SharpForge because of my vision: to create a great game editor and gam
 
 # Contributing
 
+## Developer Environment Setup
+
+- Follow the [MonoGame setup steps](https://docs.monogame.net/articles/getting_started/1_setting_up_your_os_for_development_windows.html?tabs=android) - note that the linked ones are for Windows, pick the ones for your OS.
+
+I recommend using Visual Studio Code, since it's free and cross-platform.
+
+## Design and Architecture
+
 If you find something you want to change, feel free to open a PR. If it's a better change, please open an issue first to discuss it, so we can figure out the best solutiion together!
 
 The following projects make up SharpForge, each with its own unique (hopefully singular) responsibilities. Please keep this in mind when you make your changes, making them to the correct layer.
 
-- **Editor:** The visual editor. It's a SharpForge game, which outputs the set of game data and assets required to play the game.
+- **Editor:** The visual editor. It's also a SharpForge game, which outputs the set of game data and assets required to play the game.
 - **Framework:** The core "game engine" that runs the game, based on data. Handles functionality like AABB collision detection, UI handling, screen scaling, etc. Should contain the majority of logic required, although may call into the backend project for simple rendering.
 - **Core:** An abstraction layer between the framework/editor and whatever "back-end" implementation we use.
 - **Backend.Nez:** An implementation of the core, in Nez. Should contain minimal logic, to facilitate swapping out if necessary in the future. Wraps around and hopefully isolates the back-end code to a single (swappable) location.
