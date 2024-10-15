@@ -1,5 +1,6 @@
 namespace SharpForge.Framework.UnitTests;
 
+[TestFixture]
 public class GameTests
 {
     [Test]
