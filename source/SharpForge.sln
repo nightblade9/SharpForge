@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Framework.UnitTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Core.UnitTests", "SharpForge.Core.UnitTests\SharpForge.Core.UnitTests.csproj", "{7216B5F4-33F1-4A3B-96DE-2C089AFFE802}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Backend.Nez", "SharpForge.Backend.Nez\SharpForge.Backend.Nez.csproj", "{262D78E5-C97F-4982-BE84-38D6FCCA222D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Core", "SharpForge.Core\SharpForge.Core.csproj", "{404DAEFB-7998-41EB-BCD5-A3F3E9F44745}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Framework", "SharpForge.Framework\SharpForge.Framework.csproj", "{2479A346-C1AE-4DDD-9D4F-46B9ADE64350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +44,18 @@ Global
 		{7216B5F4-33F1-4A3B-96DE-2C089AFFE802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7216B5F4-33F1-4A3B-96DE-2C089AFFE802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7216B5F4-33F1-4A3B-96DE-2C089AFFE802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262D78E5-C97F-4982-BE84-38D6FCCA222D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262D78E5-C97F-4982-BE84-38D6FCCA222D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262D78E5-C97F-4982-BE84-38D6FCCA222D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262D78E5-C97F-4982-BE84-38D6FCCA222D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{404DAEFB-7998-41EB-BCD5-A3F3E9F44745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{404DAEFB-7998-41EB-BCD5-A3F3E9F44745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{404DAEFB-7998-41EB-BCD5-A3F3E9F44745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{404DAEFB-7998-41EB-BCD5-A3F3E9F44745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2479A346-C1AE-4DDD-9D4F-46B9ADE64350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2479A346-C1AE-4DDD-9D4F-46B9ADE64350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2479A346-C1AE-4DDD-9D4F-46B9ADE64350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2479A346-C1AE-4DDD-9D4F-46B9ADE64350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AD9BC92C-391F-44B2-846A-17236ABD6794} = {6A8360EE-4942-4912-B660-78D0E6EA1E7C}
