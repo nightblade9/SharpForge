@@ -23,7 +23,7 @@ The following projects make up SharpForge, each with its own unique (hopefully s
 - **Editor:** The visual editor. It's also a SharpForge game, which outputs the set of game data and assets required to play the game.
 - **Framework:** The core "game engine" that runs the game, based on data. Handles functionality like AABB collision detection, UI handling, screen scaling, etc. Should contain the majority of logic required, although may call into the backend project for simple rendering.
 - **Core:** An abstraction layer between the framework/editor and whatever "back-end" implementation we use.
-- **Backend.Nez:** An implementation of the core, in Nez. Should contain minimal logic, to facilitate swapping out if necessary in the future. Wraps around and hopefully isolates the back-end code to a single (swappable) location.
+- **Backend.Nez:** An implementation of the core, in Nez. Should contain minimal logic, to facilitate swapping out if necessary in the future. Wraps around and hopefully isolates the back-end code to a single (swappable) location. Should be the only place we reference `Nez`- and `MonoGame`-namespaced classes.
 
 In particular, **the framework project should contain the majority of code,** including rendering order-of-operations, AABB, etc. As much as possible, favour inserting code there, instead of in the backend library. (Should we swap the backend library out, it shouldn't require much in terms of complex code to re-implement.)
 

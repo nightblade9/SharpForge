@@ -27,7 +27,8 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nez\Nez.Portable\Nez.MG38.csproj" />
+    <ProjectReference Include="..\SharpForge.Framework\SharpForge.Framework.csproj" />
+    <ProjectReference Include="..\SharpForge.Core\SharpForge.Core.csproj" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />
