@@ -9,6 +9,5 @@ public class Node
     // TODO: do we have a Vector2 type for position?
 
     // TODO: replace with an enum, once we have more node types. How do we handle scenes as node types?
-    public string NodeType { get; protected set; } = "Node";
     public IList<Node> Contents = new List<Node>();
 }

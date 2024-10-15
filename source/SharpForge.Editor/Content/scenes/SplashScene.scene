@@ -1,10 +1,16 @@
 {
-  "Contents": [
-    {
-        "Contents": [],
-        "ImageFile": "Contents/Images/logo.png",
-        "NodeType": "Sprite",
-    }
-  ],
-  "NodeType": "Node"
+  "$type": "SharpForge.Core.Nodes.Node, SharpForge.Core",
+  "Contents": {
+    "$type": "System.Collections.Generic.List`1[[SharpForge.Core.Nodes.Node, SharpForge.Core]], System.Private.CoreLib",
+    "$values": [
+      {
+        "$type": "SharpForge.Core.Nodes.Sprite, SharpForge.Core",
+        "Contents": {
+          "$type": "System.Collections.Generic.List`1[[SharpForge.Core.Nodes.Node, SharpForge.Core]], System.Private.CoreLib",
+          "$values": []
+        },
+        "ImageFile": "Content/Images/logo.png"
+      }
+    ]
+  }
 }
