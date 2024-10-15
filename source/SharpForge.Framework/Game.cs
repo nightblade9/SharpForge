@@ -44,10 +44,9 @@ public class Game : SharpForge.Core.Game
         var texture = LoadTexture2DFromFile(sprite.ImageFile);
         var entity = new Entity();
         var component = new SpriteRenderer(texture);
+        // Gotta do this for all images because center is the middle by default.
+        component.Origin = Vector2.Zero;
         entity.AddComponent(component);
-
-        // Gotta do this for all images because center is the middle by default. This is not the way.
-        entity.Position = new Microsoft.Xna.Framework.Vector2(Screen.Width / 2, Screen.Height / 2);
 
         var tempScene = new Scene();
         tempScene.ClearColor = Color.Black;
@@ -58,7 +57,7 @@ public class Game : SharpForge.Core.Game
     }
 
     // TODO: this doesn't belong here!
-    private Texture2D LoadTexture2DFromFile(string filename)
+    private static Texture2D LoadTexture2DFromFile(string filename)
     {
         using (var stream = File.OpenRead(filename))
         {
