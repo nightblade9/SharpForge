@@ -52,4 +52,21 @@ public class NodeSerializerTests
         Assert.That(actual.Contents[1].Contents.Count, Is.EqualTo(1));
         Assert.That(actual.Contents[1].Contents[0].NodeType, Is.EqualTo("Node"));
     }
+
+    [Test]
+    public void SerializeAndDeserialize_DeserializeSpriteTypeAndImageFilename()
+    {
+        // Arrange
+        var sprite = new Sprite();
+        var expectedImageFile = "Content/images/foo/bar.png";
+        sprite.ImageFile = expectedImageFile;
+        var serializer = new NodeSerializer();
+
+        // Act
+        var actual = serializer.Deserialize<Sprite>(serializer.Serialize(sprite));
+
+        // Assert
+        Assert.That(actual.NodeType, Is.EqualTo("Sprite"));
+        Assert.That(actual.ImageFile, Is.EqualTo(expectedImageFile));
+    }
 }
