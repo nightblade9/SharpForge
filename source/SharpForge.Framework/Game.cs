@@ -1,6 +1,8 @@
 ﻿namespace SharpForge.Framework;
 
 using System.IO;
+using SharpForge.Core.Nodes;
+using SharpForge.Core.Persistence;
 
 public class Game : SharpForge.Core.Game
 {
@@ -24,12 +26,13 @@ public class Game : SharpForge.Core.Game
 
     public void LoadAndShowScene(string sceneName)
     {
-        System.Console.WriteLine($"Loading and displaying {sceneName}!");
         var normalizedName = NormalizeSceneName(sceneName);
         VerifySceneExists(normalizedName);
 
         string sceneContents = File.ReadAllText(normalizedName);
-        System.Console.WriteLine($"Scene contents: {sceneContents}!");
+        // TODO: how do we know the root is type Node? What if it's a Sprite, will this return Sprite as the root?
+        var sceneTree = new NodeSerializer().Deserialize<Node>(sceneContents);
+        ;
     }
 
 }

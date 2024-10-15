@@ -69,4 +69,32 @@ public class NodeSerializerTests
         Assert.That(actual.NodeType, Is.EqualTo("Sprite"));
         Assert.That(actual.ImageFile, Is.EqualTo(expectedImageFile));
     }
+
+    [Test]
+    public void SerializeAndDeserialize_DeserializesSplashScene()
+    {
+        // Arrange
+        var sceneContents = GetSceneContents("SplashScene.scene");
+        var serializer = new NodeSerializer();
+
+        // Act
+        var actualRoot = serializer.Deserialize<Node>(sceneContents);
+
+        // Assert
+        Assert.That(actualRoot.NodeType, Is.EqualTo("Node"));
+        Assert.That(actualRoot.Contents.Count, Is.EqualTo(1));
+
+        Sprite actualSprite = actualRoot.Contents[0] as Sprite;
+        Assert.That(actualSprite, Is.Not.Null);
+        Assert.That(actualSprite, Is.InstanceOf<Sprite>());
+        Assert.That(actualSprite.NodeType, Is.EqualTo("Sprite"));
+        Assert.That(actualSprite.ImageFile, Is.EqualTo("Contents/Images/logo.png"));
+    }
+
+    private string GetSceneContents(string sceneFile)
+    {
+        var path = Path.Join("TestFiles", "Scenes", sceneFile);
+        var contents = File.ReadAllText(path);
+        return contents;
+    }
 }

@@ -1,0 +1,10 @@
+{
+  "Contents": [
+    {
+        "Contents": [],
+        "ImageFile": "Contents/Images/logo.png",
+        "NodeType": "Sprite",
+    }
+  ],
+  "NodeType": "Node"
+}

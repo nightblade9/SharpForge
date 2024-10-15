@@ -25,6 +25,12 @@ public class NodeSerializer()
             throw new ArgumentNullException(nameof(input));
         }
 
-        return JsonConvert.DeserializeObject<T>(input);
+        var toReturn = JsonConvert.DeserializeObject<T>(input);
+        if (toReturn == null)
+        {
+            throw new ArgumentException($"Input JSON doesn't deserialize into a Node.");
+        }
+
+        return toReturn;
     }
 }

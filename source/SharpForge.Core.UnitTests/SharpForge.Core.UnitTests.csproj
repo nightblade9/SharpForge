@@ -21,4 +21,8 @@
     <ProjectReference Include="..\SharpForge.Core\SharpForge.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <None Update="TestFiles/**/*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
