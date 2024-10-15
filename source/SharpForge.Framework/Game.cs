@@ -1,6 +1,6 @@
 ﻿namespace SharpForge.Framework;
 
-public class Class1
+public class Game : SharpForge.Core.Game
 {
 
 }

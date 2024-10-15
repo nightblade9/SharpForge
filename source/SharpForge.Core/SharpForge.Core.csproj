@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\SharpForge.Backend.Nez\SharpForge.Backend.Nez.csproj" />
     <ProjectReference Include="..\Nez\Nez.Portable\Nez.MG38.csproj" />
   </ItemGroup>
 
