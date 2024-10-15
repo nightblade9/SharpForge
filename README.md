@@ -6,6 +6,18 @@ A multi-platform 2D game engine for desktop games. Free and open source (FOSS). 
 
 I created SharpForge because of my vision: to create a great game editor and game engine, that's accessible to C# developers end-to-end -- it's free and open-source, and you can fork and edit every line of code yourself.  And it should be intuitive, run fast, be well-designed and architected, and work across desktop (Windows, Linux, and Mac) for 2D games.
 
+# Using SharpForge
+
+TBD. For now, just clone the `SharpForge.Editor` project and change stuff.
+
+Note for later: need to tell the compiler to copy all .scene files. Here's how I did it in the editor project:
+
+```xml
+<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <None Update="scenes/**/*" CopyToOutputDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
 # Contributing
 
 ## Developer Environment Setup
