@@ -1,6 +1,7 @@
 ﻿namespace SharpForge.Framework;
 
 using System.IO;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using Nez.Sprites;
@@ -49,6 +50,7 @@ public class Game : SharpForge.Core.Game
         entity.Position = new Microsoft.Xna.Framework.Vector2(Screen.Width / 2, Screen.Height / 2);
 
         var tempScene = new Scene();
+        tempScene.ClearColor = Color.Black;
         tempScene.AddEntity(entity);
         
         // This is where the magic happens

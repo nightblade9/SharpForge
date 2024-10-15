@@ -22,6 +22,7 @@ Note for later: need to tell the compiler to copy all .scene files. Here's how I
 
 ## Developer Environment Setup
 
+- Clone the repo, and then run `git submodule update --init` to populate `Nez`
 - Follow the [MonoGame setup steps](https://docs.monogame.net/articles/getting_started/1_setting_up_your_os_for_development_windows.html?tabs=android) - note that the linked ones are for Windows, pick the ones for your OS.
 
 I recommend using Visual Studio Code, since it's free and cross-platform.
