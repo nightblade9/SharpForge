@@ -1,2 +1,3 @@
-﻿using var game = new SharpForge.Editor.Game1();
+﻿using var game = new SharpForge.Editor.MainGame();
+
 game.Run();
