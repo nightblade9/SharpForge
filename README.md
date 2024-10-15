@@ -14,7 +14,7 @@ Note for later: need to tell the compiler to copy all .scene files. Here's how I
 
 ```xml
 <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <None Update="scenes/**/*" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Content/**/*" CopyToOutputDirectory="PreserveNewest" />
 </ItemGroup>
 ```
 

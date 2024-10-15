@@ -6,8 +6,9 @@ using System.IO;
 
 public class MainGame : Game
 {
-    public MainGame()
+    protected override void Initialize()
     {
+        base.Initialize();
         LoadAndShowScene(Path.Join("Content", "scenes", "SplashScene"));
     }
 }
