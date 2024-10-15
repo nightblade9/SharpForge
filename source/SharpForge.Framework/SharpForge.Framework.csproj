@@ -10,4 +10,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="SharpForge.Framework.UnitTests" />
+  </ItemGroup>
+
+
 </Project>
