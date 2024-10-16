@@ -12,12 +12,14 @@ If you find something you want to change, feel free to open a PR. If it's a bett
 
 The following projects make up SharpForge, each with its own unique (hopefully singular) responsibilities. Please keep this in mind when you make your changes, making them to the correct layer.
 
-- **Editor:** The visual editor. It's a SharpForge game, which outputs the set of game data and assets required to play the game.
-- **Framework:** The core "game engine" that runs the game, based on data. Handles functionality like AABB collision detection, UI handling, screen scaling, etc. Should contain the majority of logic required, although may call into the backend project for simple rendering.
-- **Core:** An abstraction layer between the framework/editor and whatever "back-end" implementation we use.
-- **Backend.Nez:** An implementation of the core, in Nez. Should contain minimal logic, to facilitate swapping out if necessary in the future. Wraps around and hopefully isolates the back-end code to a single (swappable) location.
+- **Core:** Pure data that represents our game, e.g. `Node` and `Sprite` classes with `ImageFile` and `Rotation` properties.
+- **Framework:** The core "game engine" that runs the game, based on data. Handles functionality like AABB collision detection, UI handling, screen scaling, etc. Provides interfaces, and relies on those for functionality.
+- **Backend.Nez:** An implementation of the interfaces for Framework. This could be as low-level as rendering a sprite on screen, or as high-level as collision detection and resolution.
+- **Editor:** The visual editor, which outputs the set of game data and assets required to play the game.
 
-In particular, **the framework project should contain the majority of code,** including rendering order-of-operations, AABB, etc. As much as possible, favour inserting code there, instead of in the backend library. (Should we swap the backend library out, it shouldn't require much in terms of complex code to re-implement.)
+In particular, **the framework project should contain the majority of code,** including rendering order-of-operations, AABB, etc. As much as possible, favour inserting code there, instead of in the backend library. (Should we need to swap the backend library out, it shouldn't require much in terms of complex code to re-implement.)
+
+It's not layers; rather, the core game engine is the `Framework` project, which exposes interfaces. It's up to the backend to implement them. The editor simply pulls everything together.
 
 # Credits
 
