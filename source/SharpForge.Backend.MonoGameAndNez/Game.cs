@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nez;
+using SharpForge.Backend.MonoGameAndNez.Adapter;
 using SharpForge.Core.Nodes;
 using SharpForge.Framework;
 using System;
@@ -10,11 +11,16 @@ namespace SharpForge.Backend.MonoGameAndNez;
 
 public class Game : Nez.Core, IGame
 {
+    /// <summary>
+    /// Which scene this game displays on run.
+    /// </summary>
     public string StartingSceneFile { get; set; }
 
+    // The parsed version of StartingSceneFile.
     public Node SceneTree { get; set; }
 
     private Scene _currentScene;
+    private SpritePopulator _spritePopulator;
 
     public Game()
     {
@@ -37,6 +43,9 @@ public class Game : Nez.Core, IGame
 
         // Assign/activate the current scene
         Nez.Core.Scene = _currentScene;
+        _spritePopulator = new SpritePopulator(_currentScene);
+        
+        PopulateNodes(this.SceneTree);
     }
 
     protected override void LoadContent()
@@ -63,5 +72,24 @@ public class Game : Nez.Core, IGame
         // TODO: Add your drawing code here
 
         base.Draw(gameTime);
+    }
+
+    private void PopulateNodes(Node sceneTree)
+    {
+        PopulateNode(sceneTree);
+        foreach (var child in sceneTree.Contents)
+        {
+            PopulateNode(child);
+        }
+    }
+
+    private void PopulateNode(Node node)
+    {
+        var sprite = node as Sprite;
+        if (sprite != null)
+        {
+            _spritePopulator.PopulateSprite(sprite);
+            return;
+        }
     }
 }
