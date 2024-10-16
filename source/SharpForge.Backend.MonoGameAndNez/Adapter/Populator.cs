@@ -12,11 +12,10 @@ abstract class Populator
         _currentScene = currentScene;
     }
 
-    protected void CreateAndAddEntity(Component component, Vector2 position)
+    protected void CreateAndAddEntity(Component component)
     {
         var entity = new Entity();
         entity.AddComponent(component);
-        entity.Position = position;
         _currentScene.AddEntity(entity);
     }
 }

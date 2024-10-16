@@ -27,7 +27,7 @@
         "Position": {
           "$type":"System.Numerics.Vector2, System.Private.CoreLib",
           "X": 600.0,
-          "Y": 660.0
+          "Y": 600.0
         },
         "Text": "SharpForge"
       }

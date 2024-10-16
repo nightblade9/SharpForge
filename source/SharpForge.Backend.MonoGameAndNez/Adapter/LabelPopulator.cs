@@ -18,10 +18,8 @@ class LabelPopulator : Populator
             throw new ArgumentException(nameof(label.FontSize));
         }
 
-        var component = new TextComponent(Graphics.Instance.BitmapFont, label.Text, label.Position, Color.Red)
-            // TODO: z-indexes are tricksy little hobbitses ... render on top of everything else (for now)
-            .SetRenderLayer(999);
+        var component = new TextComponent(Graphics.Instance.BitmapFont, label.Text, label.Position, Color.White);
             
-        CreateAndAddEntity(component, label.Position);
+        CreateAndAddEntity(component);
     }
 }
