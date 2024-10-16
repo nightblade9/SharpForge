@@ -19,6 +19,8 @@ The following projects make up SharpForge, each with its own unique (hopefully s
 
 In particular, **the framework project should contain the majority of code,** including rendering order-of-operations, AABB, etc. As much as possible, favour inserting code there, instead of in the backend library. (Should we need to swap the backend library out, it shouldn't require much in terms of complex code to re-implement.)
 
+It's not layers; rather, the core game engine is the `Framework` project, which exposes interfaces. It's up to the backend to implement them. The editor simply pulls everything together.
+
 # Credits
 
 Special thanks to these tools and frameworks, without which, SharpForge would remain a dream forever. In alphabetical order:
