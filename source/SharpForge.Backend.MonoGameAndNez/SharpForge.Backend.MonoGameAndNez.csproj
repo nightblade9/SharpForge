@@ -7,4 +7,9 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpForge.Core\SharpForge.Core.csproj" />
+    <ProjectReference Include="..\SharpForge.Framework\SharpForge.Framework.csproj" />
+    <ProjectReference Include="..\Nez\Nez.Portable\Nez.MG38.csproj" />
+  </ItemGroup>
 </Project>
