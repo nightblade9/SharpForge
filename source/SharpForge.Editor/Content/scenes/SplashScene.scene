@@ -9,7 +9,27 @@
           "$type": "System.Collections.Generic.List`1[[SharpForge.Core.Nodes.Node, SharpForge.Core]], System.Private.CoreLib",
           "$values": []
         },
-        "ImageFile": "Content/Images/logo.png"
+        "ImageFile": "Content/Images/logo.png",
+        "IsCentered": true,
+        "Position": {
+          "$type":"System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 640.0,
+          "Y": 360.0
+        }
+      },
+      {
+        "$type": "SharpForge.Core.Nodes.Label, SharpForge.Core",
+        "Contents": {
+          "$type": "System.Collections.Generic.List`1[[SharpForge.Core.Nodes.Node, SharpForge.Core]], System.Private.CoreLib",
+          "$values": []
+        },
+        "FontSize": 36,
+        "Position": {
+          "$type":"System.Numerics.Vector2, System.Private.CoreLib",
+          "X": 560.0,
+          "Y": 600.0
+        },
+        "Text": "SharpForge"
       }
     ]
   }
