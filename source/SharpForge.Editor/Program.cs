@@ -18,8 +18,7 @@ public class Program
         ConfigureNezBackend();
 
         var game = _serviceProvider.GetRequiredService<IGame>();
-        using var gameRunner = new GameRunner(game);
-        gameRunner.Run();
+        game.Run();
 
         Console.WriteLine("Goodbye!");
     }
