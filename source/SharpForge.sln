@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Core", "SharpForge.Core\SharpForge.Core.csproj", "{4925BF1E-D711-4990-908C-A43A5DB5C43E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Framework", "SharpForge.Framework\SharpForge.Framework.csproj", "{597AC5CF-1180-41C0-A7B8-DB2FE7C0CD3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Backend.MonoGameAndNez", "SharpForge.Backend.MonoGameAndNez\SharpForge.Backend.MonoGameAndNez.csproj", "{F49722A9-BE0A-41E7-8E66-293415F34440}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{4925BF1E-D711-4990-908C-A43A5DB5C43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4925BF1E-D711-4990-908C-A43A5DB5C43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4925BF1E-D711-4990-908C-A43A5DB5C43E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{597AC5CF-1180-41C0-A7B8-DB2FE7C0CD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597AC5CF-1180-41C0-A7B8-DB2FE7C0CD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597AC5CF-1180-41C0-A7B8-DB2FE7C0CD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597AC5CF-1180-41C0-A7B8-DB2FE7C0CD3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49722A9-BE0A-41E7-8E66-293415F34440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49722A9-BE0A-41E7-8E66-293415F34440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49722A9-BE0A-41E7-8E66-293415F34440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49722A9-BE0A-41E7-8E66-293415F34440}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
