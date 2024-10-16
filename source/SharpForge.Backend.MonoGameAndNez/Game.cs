@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nez;
 using SharpForge.Backend.MonoGameAndNez.Adapter;
+using SharpForge.Backend.MonoGameAndNez.Text;
 using SharpForge.Core.Nodes;
 using SharpForge.Framework;
 using System;
@@ -38,6 +39,9 @@ public class Game : Nez.Core, IGame
         
         // TODO: Add your initialization logic here
         base.Initialize();
+
+        // One-time operation once Game is initialized properly
+        FontLoader.Instance.LoadAllFonts();
 
         _currentScene = new Scene();
         _currentScene.AddRenderer(new DefaultRenderer());

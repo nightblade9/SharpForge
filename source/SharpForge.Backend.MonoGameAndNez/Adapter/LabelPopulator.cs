@@ -1,6 +1,7 @@
 using System;
 using Microsoft.Xna.Framework;
 using Nez;
+using SharpForge.Backend.MonoGameAndNez.Text;
 using SharpForge.Core.Nodes;
 
 namespace SharpForge.Backend.MonoGameAndNez.Adapter;
@@ -18,8 +19,8 @@ class LabelPopulator : Populator
             throw new ArgumentException(nameof(label.FontSize));
         }
 
-        var bigChungus = Nez.Core.Content.LoadBitmapFont("Content/Fonts/Arial-36.fnt", true);
-        var component = new TextComponent(bigChungus, label.Text, label.Position, Color.White);
+        var font = FontLoader.Instance.GetFont("Arial", label.FontSize);
+        var component = new TextComponent(font, label.Text, label.Position, Color.White);
             
         CreateAndAddEntity(component);
     }

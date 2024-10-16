@@ -26,7 +26,7 @@
         "FontSize": 36,
         "Position": {
           "$type":"System.Numerics.Vector2, System.Private.CoreLib",
-          "X": 600.0,
+          "X": 560.0,
           "Y": 600.0
         },
         "Text": "SharpForge"
