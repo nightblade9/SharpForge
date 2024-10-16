@@ -18,7 +18,8 @@ class LabelPopulator : Populator
             throw new ArgumentException(nameof(label.FontSize));
         }
 
-        var component = new TextComponent(Graphics.Instance.BitmapFont, label.Text, label.Position, Color.White);
+        var bigChungus = Nez.Core.Content.LoadBitmapFont("Content/Fonts/Arial-36.fnt", true);
+        var component = new TextComponent(bigChungus, label.Text, label.Position, Color.White);
             
         CreateAndAddEntity(component);
     }
