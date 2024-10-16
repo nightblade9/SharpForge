@@ -19,7 +19,8 @@ public class Program
         ConfigureNezBackend();
 
         var game = _serviceProvider.GetRequiredService<IGame>();
-        game.Run();
+        game.StartingSceneFile = Path.Join("Content", "scenes", "SplashScene.scene");
+        new GameRunner().Run(game);
 
         Console.WriteLine("Goodbye!");
     }

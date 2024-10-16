@@ -2,12 +2,18 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nez;
+using SharpForge.Core.Nodes;
 using SharpForge.Framework;
+using System;
 
 namespace SharpForge.Backend.MonoGameAndNez;
 
 public class Game : Nez.Core, IGame
 {
+    public string StartingSceneFile { get; set; }
+
+    public Node SceneTree { get; set; }
+
     private Scene _currentScene;
 
     public Game()
@@ -18,6 +24,11 @@ public class Game : Nez.Core, IGame
 
     protected override void Initialize()
     {
+        if (SceneTree == null)
+        {
+            throw new InvalidOperationException("Please set a starting scene before running your game!");
+        }
+        
         // TODO: Add your initialization logic here
         base.Initialize();
 
