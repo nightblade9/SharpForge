@@ -21,6 +21,7 @@ public class Game : Nez.Core, IGame
 
     private Scene _currentScene;
     private SpritePopulator _spritePopulator;
+    private LabelPopulator _labelPopulator;
 
     public Game()
     {
@@ -39,11 +40,14 @@ public class Game : Nez.Core, IGame
         base.Initialize();
 
         _currentScene = new Scene();
+        _currentScene.AddRenderer(new DefaultRenderer());
         _currentScene.ClearColor = Color.Black;
 
         // Assign/activate the current scene
         Nez.Core.Scene = _currentScene;
+
         _spritePopulator = new SpritePopulator(_currentScene);
+        _labelPopulator = new LabelPopulator(_currentScene);
         
         PopulateNodes(this.SceneTree);
     }
@@ -85,11 +89,15 @@ public class Game : Nez.Core, IGame
 
     private void PopulateNode(Node node)
     {
-        var sprite = node as Sprite;
-        if (sprite != null)
+        if (node is Sprite)
         {
-            _spritePopulator.PopulateSprite(sprite);
-            return;
+            var sprite = node as Sprite;
+            _spritePopulator.Populate(sprite);
+        }
+        else if (node is Label)
+        {
+            var label = node as Label;
+            _labelPopulator.Populate(label);
         }
     }
 }

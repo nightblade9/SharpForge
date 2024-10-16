@@ -10,6 +10,15 @@
           "$values": []
         },
         "ImageFile": "Content/Images/logo.png"
+      },
+      {
+        "$type": "SharpForge.Core.Nodes.Label, SharpForge.Core",
+        "Contents": {
+          "$type": "System.Collections.Generic.List`1[[SharpForge.Core.Nodes.Node, SharpForge.Core]], System.Private.CoreLib",
+          "$values": []
+        },
+        "FontSize": 36,
+        "Text": "SharpForge"
       }
     ]
   }
