@@ -10,10 +10,11 @@ public class Program
 
     public static void Main(string[] args)
     {
-        new Program().Run();
+        // TODO: run the editor, not the game!
+        new Program().RunGame();
     }
 
-    private void Run()
+    private void RunGame()
     {
         ConfigureNezBackend();
 
