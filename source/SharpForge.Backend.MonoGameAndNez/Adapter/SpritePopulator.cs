@@ -33,9 +33,11 @@ class SpritePopulator : Populator
 
         var texture = LoadTexture2DFromFile(sprite.ImageFile);
         var component = new SpriteRenderer(texture);
-        // Render with (0, 0) being the top-left of the image, not the center.
-        component.Origin = Vector2.Zero;
-        
+        if (!sprite.IsCentered)
+        {
+            // Render with (0, 0) being the top-left of the image, not the center.
+            component.Origin = Vector2.Zero;
+        }
         CreateAndAddEntity(component, sprite.Position);
     }
 }
