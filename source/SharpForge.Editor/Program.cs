@@ -20,7 +20,7 @@ public class Program
 
         var game = _serviceProvider.GetRequiredService<IGame>();
         game.StartingSceneFile = Path.Join("Content", "scenes", "SplashScene.scene");
-        new GameRunner().Run(game);
+        GameRunner.Run(game);
 
         Console.WriteLine("Goodbye!");
     }

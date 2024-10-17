@@ -7,10 +7,10 @@ namespace SharpForge.Backend.MonoGameAndNez.Text;
 
 class FontLoader
 {
-    public static FontLoader Instance = new FontLoader();
-    private Dictionary<(string, int), BitmapFont> _fonts = new();
+    public static readonly FontLoader Instance = new FontLoader();
+    private readonly Dictionary<(string, int), BitmapFont> _fonts = new();
 
-    private List<(string, int)> _fontsToLoad = new()
+    private readonly List<(string, int)> _supportedFonts = new()
     {
         ("Arial", 36),
     };
@@ -23,7 +23,7 @@ class FontLoader
     {
         _fonts.Clear();
 
-        foreach (var fontData in _fontsToLoad)
+        foreach (var fontData in _supportedFonts)
         {
             var bitmapFont = Nez.Core.Content.LoadBitmapFont("Content/Fonts/Arial-36.fnt", true);
             _fonts[fontData] = bitmapFont;
@@ -33,11 +33,15 @@ class FontLoader
     public BitmapFont GetFont(string fontName, int fontSize)
     {
         var tuple = (fontName, fontSize);
-        if (!_fonts.ContainsKey(tuple))
+        BitmapFont font = null;
+        
+        bool wasKeyPresent = _fonts.TryGetValue(tuple, out font);
+        if (!wasKeyPresent)
         {
-            throw new InvalidOperationException($"SharpForge doesn't support {fontName} at size {fontSize}. Valid fonts are: {String.Join(", ", _fonts.Keys.Select(k => k.Item1 + " size " + k.Item2))}");
+            var listOfSupportedFonts = String.Join(", ", _fonts.Keys.Select(k => $"{k.Item1} {k.Item2}pt"));
+            throw new InvalidOperationException($"SharpForge doesn't support {fontName} at size {fontSize}. Valid fonts are: {listOfSupportedFonts}");
         }
 
-        return _fonts[tuple];
+        return font;
     }
 }

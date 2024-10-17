@@ -1,6 +1,5 @@
 namespace SharpForge.Core.Persistence;
 
-using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 using SharpForge.Core.Nodes;
 
@@ -9,27 +8,20 @@ using SharpForge.Core.Nodes;
 /// </summary>
 public class NodeSerializer()
 {
-    private JsonSerializerSettings _defaultSettings = new JsonSerializerSettings
+    private readonly JsonSerializerSettings _defaultSettings = new JsonSerializerSettings
     {
         TypeNameHandling = TypeNameHandling.All, // Store and use type info to deserialize.
     };
 
     public string Serialize(Node root)
     {
-        if (root == null)
-        {
-            throw new ArgumentNullException(nameof(root));
-        }
-        
+        ArgumentNullException.ThrowIfNull(root);
         return JsonConvert.SerializeObject(root, _defaultSettings);
     }
 
     public T Deserialize<T>(string input) where T : Node
     {
-        if (input == null)
-        {
-            throw new ArgumentNullException(nameof(input));
-        }
+        ArgumentNullException.ThrowIfNull(input);
 
         var toReturn = JsonConvert.DeserializeObject<T>(input, _defaultSettings);
         if (toReturn == null)

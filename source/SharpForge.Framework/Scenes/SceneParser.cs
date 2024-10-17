@@ -3,7 +3,7 @@ using SharpForge.Core.Persistence;
 
 namespace SharpForge.Framework.Scenes;
 
-public class SceneParser
+public static class SceneParser
 {
 internal static string NormalizeSceneName(string input)
     {
@@ -23,7 +23,7 @@ internal static string NormalizeSceneName(string input)
         }
     }
 
-    public Node LoadScene(string sceneName)
+    public static Node LoadScene(string sceneName)
     {
         var normalizedName = NormalizeSceneName(sceneName);
         VerifySceneExists(normalizedName);

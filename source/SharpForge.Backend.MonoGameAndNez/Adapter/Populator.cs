@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Nez;
 
 namespace SharpForge.Backend.MonoGameAndNez.Adapter;
@@ -7,7 +6,7 @@ abstract class Populator
 {
     private readonly Scene _currentScene;
     
-    public Populator(Scene currentScene)
+    protected Populator(Scene currentScene)
     {
         _currentScene = currentScene;
     }
