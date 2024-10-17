@@ -45,13 +45,19 @@ public class SceneParserTests
     }
 
     [Test]
-    [TestCase(null)]
-    [TestCase("")]
-    [TestCase("              ")]
-    public void LoadScene_Throws_IfSceneNameIsNullOrWhitespace(string sceneName)
+    public void LoadScene_Throws_IfSceneNameIsNull()
     {
         // Act/Assert
-        Assert.Throws<ArgumentNullException>(() => SceneParser.LoadScene(sceneName));
+        Assert.Throws<ArgumentNullException>(() => SceneParser.LoadScene(null));
+    }
+
+    [Test]
+    [TestCase("")]
+    [TestCase("              ")]
+    public void LoadScene_Throws_IfSceneNameIsWhitespace(string sceneName)
+    {
+        // Act/Assert
+        Assert.Throws<ArgumentException>(() => SceneParser.LoadScene(sceneName));
     }
 
     [Test]

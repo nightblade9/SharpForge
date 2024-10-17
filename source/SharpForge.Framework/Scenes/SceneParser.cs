@@ -7,7 +7,7 @@ public static class SceneParser
 {
     public static Node LoadScene(string sceneName)
     {
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(sceneName);
+        ArgumentException.ThrowIfNullOrWhiteSpace(sceneName);
         var normalizedName = NormalizeSceneName(sceneName);
         VerifySceneExists(normalizedName);
 
