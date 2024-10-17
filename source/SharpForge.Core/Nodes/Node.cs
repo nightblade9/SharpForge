@@ -9,7 +9,7 @@ namespace SharpForge.Core.Nodes;
 public class Node
 {
     public Vector2 Position { get; set; } = Vector2.Zero;
-    public IList<Node> Contents = new List<Node>();
+    public IList<Node> Contents { get; } = new List<Node>();
 
     // Some JSON.NET magic; don't serialize "Contents" unless it has any entries.
     // This, coupled with the serializer's "IgnoreAndPopulate," means empty lists don't get serialized; but on
