@@ -2,7 +2,7 @@ using SharpForge.Framework.Scenes;
 
 namespace SharpForge.Framework;
 
-public class GameRunner
+public static class GameRunner
 {
     public static void Run(IGame game)
     {
