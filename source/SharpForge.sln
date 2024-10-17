@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.BackEnd.MonoGame
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Framework.UnitTests", "SharpForge.Framework.UnitTests\SharpForge.Framework.UnitTests.csproj", "{A0330725-EFAD-4ADC-A782-27F7D0A0BD4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpForge.Core.UnitTests", "SharpForge.Core.UnitTests\SharpForge.Core.UnitTests.csproj", "{753F594F-8554-4FB7-AB38-31AA70217108}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{A0330725-EFAD-4ADC-A782-27F7D0A0BD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0330725-EFAD-4ADC-A782-27F7D0A0BD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0330725-EFAD-4ADC-A782-27F7D0A0BD4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753F594F-8554-4FB7-AB38-31AA70217108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753F594F-8554-4FB7-AB38-31AA70217108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753F594F-8554-4FB7-AB38-31AA70217108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753F594F-8554-4FB7-AB38-31AA70217108}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
