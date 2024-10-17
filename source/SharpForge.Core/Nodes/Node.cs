@@ -10,4 +10,12 @@ public class Node
 {
     public Vector2 Position { get; set; } = Vector2.Zero;
     public IList<Node> Contents = new List<Node>();
+
+    // Some JSON.NET magic; don't serialize "Contents" unless it has any entries.
+    // This, coupled with the serializer's "IgnoreAndPopulate," means empty lists don't get serialized; but on
+    // deserialization, instead of null, they come back as an empty list. Groovy! Clean JSON!
+    public bool ShouldSerializeContents()
+    {
+        return Contents.Any();
+    }
 }

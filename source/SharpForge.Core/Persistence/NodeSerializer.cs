@@ -10,13 +10,14 @@ public class NodeSerializer()
 {
     private readonly JsonSerializerSettings _defaultSettings = new JsonSerializerSettings
     {
-        TypeNameHandling = TypeNameHandling.All, // Store and use type info to deserialize.
+        DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate,
+        TypeNameHandling = TypeNameHandling.All, // store and use type info to deserialize
     };
 
     public string Serialize(Node root)
     {
         ArgumentNullException.ThrowIfNull(root);
-        return JsonConvert.SerializeObject(root, _defaultSettings);
+        return JsonConvert.SerializeObject(root, Formatting.Indented, _defaultSettings);
     }
 
     public T Deserialize<T>(string input) where T : Node
