@@ -1,10 +1,16 @@
 # SharpForge
 
-:warning: **SharpForge is relatively new and likely buggy. You can expect breaking changes at any time.** :warning:
+:warning: **SharpForge is an architectural proof-of-concept, and is no longer under development.** :warning:
 
-A multi-platform 2D game engine for desktop games. Free and open source (FOSS). Built in C# and .NET 8, for C# developers, on the shoulders of giants.
+The vision: a multi-platform 2D game engine for desktop games. Free and open source (FOSS). Built in C# and .NET 8, for C# developers, on the shoulders of giants. Create a great game editor and game engine, that's accessible to C# developers end-to-end -- it's free and open-source, and you can fork and edit every line of code yourself.  And it should be intuitive, run fast, be well-designed and architected, and work across desktop (Windows, Linux, and Mac) for 2D games.
 
-I created SharpForge because of my vision: to create a great game editor and game engine, that's accessible to C# developers end-to-end -- it's free and open-source, and you can fork and edit every line of code yourself.  And it should be intuitive, run fast, be well-designed and architected, and work across desktop (Windows, Linux, and Mac) for 2D games.
+Turns out that vision is here. Check out the amazing [FlatRedBall](https://flatredball.com) engine. It delivers on this promise quite well.
+
+With one caveat: integration. With FRB, you separately run an IDE (Visual Studio), tile editor (Tiled), and game maker (FRB Editor). The experience is not integrated as seamlessly as something like Godot.
+
+Why is SharpForge nothing more than a concept? Because **FRB is as good as it gets, leveraging existing FOSS.** For a really slick integrated user experience, like [https://godotengine.org], you need to **build everything yourself.** Build a small IDE, with a small level-editor, animation editor, everything. And that's just not something one person can do; so I retired SharpForge.
+
+If a team can rally around this vision and commit to it, maybe this can be a viable option in the future.
 
 # Contributing
 
